@@ -1,0 +1,12 @@
+open cmd
+PS C:\Users\ADMIN\.ssh> cd C:\Users\ADMIN\.ssh
+PS C:\Users\ADMIN\.ssh> ssh-keygen -t rsa -f key-gitlab 
+PS C:\Users\ADMIN\.ssh> ls
+PS C:\Users\ADMIN\.ssh> cat key_gitlab.pub
+copy nội dung vào ssh của gitlab
+PS C:\Users\ADMIN\.ssh> code config
+Host gitlab.com
+    User git
+    Port 22
+    PreferredAuthentications publickey
+    IdentityFile "C:\Users\ADMIN\.ssh\key_gitlab"
